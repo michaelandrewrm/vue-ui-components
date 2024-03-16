@@ -1,0 +1,61 @@
+{
+	"name": "vue-ui-lib",
+	"private": false,
+	"version": "0.0.0",
+	"type": "module",
+	"files": [
+		"dist"
+	],
+	"main": "./dist/vue-ui-lib.cjs",
+	"module": "./dist/vue-ui-lib.js",
+	"exports": {
+		".": {
+			"import": "./dist/vue-ui-lib.js",
+			"require": "./dist/vue-ui-lib.cjs"
+		}
+	},
+	"types": "./dist/main.d.ts",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/michaelandrewrm/vue-ui-lib"
+	},
+	"scripts": {
+		"dev": "vite",
+		"build": "vite build",
+		"preview": "vite preview",
+		"test:unit": "vitest",
+		"type-check": "vue-tsc --noEmit",
+		"lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
+		"format": "prettier --write src/"
+	},
+	"peerDependencies": {
+		"vue": "^3.4.21"
+	},
+	"dependencies": {
+		"vue": "^3.4.21"
+	},
+	"devDependencies": {
+		"@rollup/plugin-typescript": "^11.1.6",
+		"@rushstack/eslint-patch": "^1.7.2",
+		"@tsconfig/node18": "^18.2.2",
+		"@types/jsdom": "^21.1.6",
+		"@types/node": "^20.11.19",
+		"@vitejs/plugin-vue": "^5.0.4",
+		"@vue/eslint-config-prettier": "^9.0.0",
+		"@vue/eslint-config-typescript": "^12.0.0",
+		"@vue/test-utils": "^2.4.4",
+		"@vue/tsconfig": "^0.5.1",
+		"eslint": "^8.56.0",
+		"eslint-plugin-vue": "^9.21.1",
+		"glob": "^10.3.10",
+		"jsdom": "^24.0.0",
+		"less": "^4.2.0",
+		"prettier": "^3.2.5",
+		"typescript": "^5.2.2",
+		"vite": "^5.1.5",
+		"vite-plugin-dts": "^3.7.3",
+		"vite-plugin-lib-inject-css": "^2.0.0",
+		"vitest": "^1.3.1",
+		"vue-tsc": "^1.8.27"
+	}
+}
