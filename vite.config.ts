@@ -4,6 +4,7 @@ import vue from '@vitejs/plugin-vue';
 import dts from 'vite-plugin-dts';
 import { libInjectCss } from 'vite-plugin-lib-inject-css';
 import { glob } from 'glob';
+import autoprefixer from 'autoprefixer';
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -16,7 +17,10 @@ export default defineConfig({
 	css: {
 		preprocessorOptions: {
 			less: {
+				plugins: [autoprefixer()],
 				globalVars: {},
+				additionalData:
+					'@import "@/assets/styles/base.less"; @import "@/assets/styles/theme.less";',
 			},
 		},
 	},

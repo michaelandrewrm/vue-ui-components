@@ -1,0 +1,32 @@
+@import './reset.less';
+@import './base.less';
+@import './theme.less';
+@import './fonts.less';
+
+*,
+:before,
+:after {
+	box-sizing: border-box;
+	border-width: @none;
+	border-style: solid;
+	border-color: @base;
+}
+
+body {
+	margin: 0;
+	line-height: inherit;
+}
+
+button,
+[type='button'],
+[type='reset'],
+[type='submit'] {
+	appearance: button;
+	background-color: transparent;
+	background-image: none;
+}
+
+html {
+	-webkit-tap-highlight-color: transparent;
+	-webkit-text-size-adjust: 100%;
+}
